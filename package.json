@@ -1,0 +1,37 @@
+{
+    "name": "chrome-tab-sort",
+    "version": "0.1.0",
+    "description": "Tab sorting utilities for Chrome extensions — sort by title, URL, domain, last accessed, custom comparators, and group-aware sorting for MV3.",
+    "author": "Zovo <hello@zovo.one>",
+    "license": "MIT",
+    "keywords": [
+        "chrome-extension",
+        "tab",
+        "sort",
+        "organize",
+        "order",
+        "domain",
+        "manifest-v3",
+        "browser-extension",
+        "productivity"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theluckystrike/chrome-tab-sort.git"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.260",
+        "typescript": "^5.3.3"
+    }
+}
