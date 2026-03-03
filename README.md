@@ -1,12 +1,27 @@
-# chrome-tab-sort — Tab Sorting Utilities
-> **Built by [Zovo](https://zovo.one)** | `npm i chrome-tab-sort`
+# chrome-tab-sort
 
-Sort by title, URL, domain, last accessed, custom comparator, deduplicate, and pinned-first.
+Sort tabs by various criteria in Chrome extensions.
 
-```typescript
-import { TabSort } from 'chrome-tab-sort';
-await TabSort.byDomain();
-await TabSort.byLastAccessed();
-const removed = await TabSort.deduplicate();
+## Overview
+
+chrome-tab-sort provides utilities to organize tabs by URL, title, or activity.
+
+## Installation
+
+```bash
+npm install chrome-tab-sort
 ```
-MIT License
+
+## Usage
+
+```javascript
+import { TabSort } from 'chrome-tab-sort';
+
+await TabSort.byUrl();
+await TabSort.byTitle();
+await TabSort.byActivity();
+```
+
+## License
+
+MIT
