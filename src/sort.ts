@@ -30,7 +30,7 @@ export class TabSort {
     /** Sort tabs by last accessed time */
     static async byLastAccessed(windowId?: number): Promise<void> {
         const tabs = await this.getTabs(windowId);
-        const sorted = [...tabs].sort((a, b) => (b.lastAccessed || 0) - (a.lastAccessed || 0));
+        const sorted = [...tabs].sort((a, b) => ((b as any).lastAccessed || 0) - ((a as any).lastAccessed || 0));
         await this.reorder(sorted);
     }
 
